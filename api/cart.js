@@ -59,7 +59,6 @@ class Cart {
         throw new Error('Id no encontrado');
       }
       const items = json.splice(index, 1);
-      console.log(items[0].products);
       return items[0].products;
     } catch (error) {
       console.log(error);
