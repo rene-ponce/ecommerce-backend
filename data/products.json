@@ -1,0 +1,22 @@
+[
+  {
+    "nombre": "test",
+    "descripcion": "desc1",
+    "codigo": "sss",
+    "foto": "sdf",
+    "precio": 200,
+    "stock": 20,
+    "id": 1,
+    "timestamp": 1650130664719
+  },
+  {
+    "nombre": "test22",
+    "descripcion": "desc22",
+    "codigo": "sss2",
+    "foto": "sdf2",
+    "precio": 200,
+    "stock": 20,
+    "id": 3,
+    "timestamp": 1650136393200
+  }
+]
