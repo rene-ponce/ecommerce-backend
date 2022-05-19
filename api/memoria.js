@@ -1,5 +1,5 @@
 const fs = require('fs');
-class Product {
+class Memoria {
   constructor(file) {
     this.file = file;
     this.products = [];
@@ -96,4 +96,4 @@ class Product {
   }
 }
 
-module.exports = Product;
+module.exports = Memoria;

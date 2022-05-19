@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-class Cart {
+class Archivo {
   constructor(file) {
     this.file = file;
   }
@@ -105,4 +105,4 @@ class Cart {
 
 }
 
-module.exports = Cart;
+module.exports = Archivo;

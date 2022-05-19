@@ -1,5 +1,5 @@
 const { Router } = require('express');
-const Product = require('../api/product.js');
+const Product = require('../api/memoria.js');
 const isAdmin = require('../middleware/isAdmin.js');
 
 const api = new Product('data/products.json');
