@@ -19,13 +19,20 @@ class Firebase {
   async getAll() {
     try {
       const querySnapshot = await this.query.get();
-    } catch (error) {
-      console.log(error);
+      return querySnapshot.docs;
+    } catch (e) {
+      console.log(e);
     }
   }
   
-  getById(id) {
-  
+  async getById(id) {
+    try {
+      const doc = this.query.doc(`${id}`);
+      const item = await doc.get();
+      return item.data();
+    } catch (e) {
+      console.log(e);
+    }
   }
   
   async create(data) {
@@ -33,6 +40,26 @@ class Firebase {
       let doc = this.query.doc();
       await doc.create(data);
       return 'Datos insertados correctamente';
+    } catch (e) {
+      console.log(e);
+    }
+  }
+  
+  async update(data, id) {
+    try {
+      const doc = this.query.doc(`${id}`);
+      await doc.update(data);
+      return 'Informacion actualizada';
+    } catch (e) {
+      console.log(e)
+    }
+  }
+  
+  async delete(id) {
+    try {
+      const doc = this.query.doc(`${id}`);
+      await doc.delete();
+      return 'Elemento eliminado';
     } catch (e) {
       console.log(e);
     }
